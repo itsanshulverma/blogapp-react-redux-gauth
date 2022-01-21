@@ -13,7 +13,7 @@ import {
 import "../styling/navbar.css";
 
 const Navbar = () => {
-  const [inputValue, setInputValue] = useState("tech");
+  const [inputValue, setInputValue] = useState("trending");
   const isSignedIn = useSelector(selectSignedIn);
   const userData = useSelector(selectUserData);
 
@@ -31,7 +31,7 @@ const Navbar = () => {
 
   return (
     <div className="navbar">
-      <h1 className="navbar__header">BlogMania 💬</h1>
+      <h1 className="navbar__header">📖 Bloggy</h1>
       {isSignedIn && (
         <div className="blog__search">
           <input
@@ -69,7 +69,7 @@ const Navbar = () => {
           />
         </div>
       ) : (
-        <h1 className="notSignedIn">User not available 😞</h1>
+        <h1 className="notSignedIn">User not signed in! ☹️</h1>
       )}
     </div>
   );
